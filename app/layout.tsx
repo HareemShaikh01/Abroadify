@@ -33,7 +33,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body
-        className={`${outfit.variable} min-h-full flex flex-col bg-white text-black dark:bg-black dark:text-white`}
+        className={`${outfit.variable} min-h-full flex flex-col bg-[#eef5ec] text-black`}
       >        <Navbar />
         <main className="flex-1 flex flex-col w-full">
           {children}
