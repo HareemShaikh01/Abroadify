@@ -10,70 +10,70 @@ const destinations = [
     name: "Australia",
     blurb:
       "Home to nearly 700,000 international students, one of the world's most sought-after study destinations.",
-    href: "/destinations/australia",
+    href: "/australia",
   },
   {
     iso: "gb",
     name: "United Kingdom",
     blurb:
       "Over 400,000 overseas students enrol each year, home to some of the world's top-ranked universities.",
-    href: "/destinations/uk",
+    href: "/uk",
   },
   {
     iso: "us",
     name: "United States",
     blurb:
       "Home to the Ivy League and some of the most prestigious, highly regarded universities on earth.",
-    href: "/destinations/usa",
+    href: "/usa",
   },
   {
     iso: "ca",
     name: "Canada",
     blurb:
       "Consistently ranked among the best study destinations for post-graduation employment and long-term return.",
-    href: "/destinations/canada",
+    href: "/canada",
   },
   {
     iso: "de",
     name: "Germany",
     blurb:
       "Strong post-study employment prospects and a reputation for rigorous, career-focused education.",
-    href: "/destinations/germany",
+    href: "/germany",
   },
   {
     iso: "my",
     name: "Malaysia",
     blurb:
       "A popular choice for affordable tuition, a well-regarded education system and rich cultural diversity.",
-    href: "/destinations/malaysia",
+    href: "/malaysia",
   },
   {
     iso: "ae",
     name: "Dubai",
     blurb:
       "World-class universities set against a backdrop of vibrant, cosmopolitan city life in the Middle East.",
-    href: "/destinations/dubai",
+    href: "/dubai",
   },
   {
     iso: "fr",
     name: "France",
     blurb:
       "Centuries of cultural heritage meet cutting-edge education, alongside the language, art and cuisine.",
-    href: "/destinations/france",
+    href: "/france",
   },
   {
     iso: "cy",
     name: "Cyprus",
     blurb:
       "Mediterranean charm, affordable tuition and a genuinely welcoming environment for international students.",
-    href: "/destinations/cyprus",
+    href: "/cyprus",
   },
   {
     iso: "fi",
     name: "Finland",
     blurb:
       "A Nordic education system known for quality, innovation and calm, well-resourced campuses.",
-    href: "/destinations/finland",
+    href: "/finland",
   },
 ];
 
@@ -192,9 +192,7 @@ export default function DestinationsCarousel() {
             </div>
 
             {/* Country name */}
-            <h3 className="mt-4 font-bold text-[#0f1e4d]">
-              {dest.name}
-            </h3>
+            <h3 className="mt-4 font-bold text-[#0f1e4d]">{dest.name}</h3>
 
             {/* Description */}
             <p className="mt-2 text-sm leading-6 text-gray-600">
