@@ -34,7 +34,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     >
       <body
         className={`${outfit.variable} min-h-full flex flex-col bg-[#eef5ec] text-black`}
-      >        <Navbar />
+      >
+        <Navbar />
         <main className="flex-1 flex flex-col w-full">
           {children}
         </main>

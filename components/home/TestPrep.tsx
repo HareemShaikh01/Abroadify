@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Check } from "lucide-react";
 
@@ -14,6 +15,7 @@ export default function TestPrep() {
   return (
     <section className="mx-3 my-4 overflow-hidden rounded-[28px] bg-[#eef5ec] sm:mx-5 sm:my-5 lg:mx-7 lg:my-6">
       <div className="mx-auto grid max-w-7xl gap-12 px-6 py-14 sm:px-10 md:grid-cols-2 md:gap-16 md:px-14 md:py-16 lg:px-16">
+        
         {/* Left column */}
         <div className="flex flex-col justify-center">
           <div className="flex items-center gap-3">
@@ -63,33 +65,20 @@ export default function TestPrep() {
           </Link>
         </div>
 
-        {/* Right column */}
-        <div className="flex flex-col justify-center">
-          <div className="rounded-2xl border border-[#0f1e4d]/10 bg-white p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#75c9ac]/50 hover:shadow-md">
-            <span className="text-xs font-bold uppercase tracking-[0.16em] text-[#75c9ac]">
-              Remote
-            </span>
-
-            <h3 className="mt-3 text-xl font-bold text-[#0f1e4d]">
-              Online IELTS & PTE Classes
-            </h3>
-
-            <p className="mt-3 text-sm leading-6 text-gray-600">
-              The same structured curriculum and instructor feedback, delivered
-              live online for students who want quality preparation from
-              wherever they are.
-            </p>
-
-            <div className="mt-6 border-t border-[#0f1e4d]/10 pt-5">
-              <p className="text-sm font-semibold text-[#0f1e4d]">
-                Two months of focused preparation
-              </p>
-              <p className="mt-1 text-sm text-gray-500">
-                Live sessions · Practice tests · Personalised feedback
-              </p>
-            </div>
+        {/* Right column - Illustration */}
+        <div className="flex items-center justify-center">
+          <div className="relative w-full max-w-[520px]">
+            <Image
+              src="/ieltssection.png"
+              alt="Student preparing for IELTS and studying abroad"
+              width={1024}
+              height={1024}
+              className="h-auto w-full object-contain"
+              priority
+            />
           </div>
         </div>
+
       </div>
     </section>
   );
