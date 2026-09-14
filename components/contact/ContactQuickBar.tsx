@@ -12,8 +12,8 @@ const items = [
   {
     icon: Mail,
     label: "Email Us",
-    value: "info@abroadifyempoweryourdreams.com",
-    href: "mailto:info@abroadifyempoweryourdreams.com",
+    value: "Info@abroadifyedu.com",
+    href: "mailto:Info@abroadifyedu.com",
   },
   {
     icon: MessageCircle,

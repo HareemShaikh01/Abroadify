@@ -36,7 +36,7 @@ export default function Hero() {
 
               {/* Primary Button */}
               <Link
-                href="/contact"
+                href="/contact#contactSection"
                 className="group relative overflow-hidden rounded-full bg-[#0f1e4d] px-6 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_25px_rgba(15,30,77,0.2)]"
               >
                 <span className="relative z-10">
@@ -49,7 +49,7 @@ export default function Hero() {
 
               {/* Secondary Button */}
               <Link
-                href="/destinations"
+                href="#destinationsSection"
                 className="rounded-full border border-[#0f1e4d] px-6 py-3 text-sm font-semibold text-[#0f1e4d] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0f1e4d] hover:text-white hover:shadow-[0_8px_25px_rgba(15,30,77,0.12)]"
               >
                 Explore Destinations

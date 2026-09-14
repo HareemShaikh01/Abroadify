@@ -138,7 +138,7 @@ export default function DestinationsCarousel() {
   }, []);
 
   return (
-    <section className="bg-[#eef5ec] py-16 sm:py-20">
+    <section id="destinationsSection" className="bg-[#eef5ec] py-16 sm:py-20">
       {/* Heading */}
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
         <div className="mx-auto max-w-2xl text-center">

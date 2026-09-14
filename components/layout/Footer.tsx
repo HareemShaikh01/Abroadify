@@ -14,26 +14,26 @@ import {
 } from "react-icons/fa";
 
 const studentServices = [
-  { label: "Career Counselling", href: "/services" },
-  { label: "University Selection", href: "/universities" },
-  { label: "Application Assistance", href: "/services" },
-  { label: "Visa Guidance", href: "/services" },
-  { label: "IELTS / PTE Preparation", href: "/test-prep" },
+  "Career Counselling",
+  "University Selection",
+  "Application Assistance",
+  "Visa Guidance",
+  "IELTS / PTE Preparation",
 ];
 
 const destinations = [
-  "Australia",
-  "United Kingdom",
-  "United States",
-  "Canada",
-  "Germany",
+  { label: "Australia", href: "/australia" },
+  { label: "United Kingdom", href: "/uk" },
+  { label: "United States", href: "/us" },
+  { label: "Canada", href: "/canada" },
+  { label: "Germany", href: "/germany" },
 ];
 
 const companyLinks = [
   { label: "About Us", href: "/about" },
   { label: "Universities", href: "/universities" },
-  { label: "Destinations", href: "/destinations" },
-  { label: "Contact Us", href: "/contact" },
+  { label: "Destinations", href: "/#destinationsSection" },
+  { label: "Contact Us", href: "/contact#contactSection" },
 ];
 
 export default function Footer() {
@@ -114,17 +114,10 @@ export default function Footer() {
 
             <ul className="mt-5 space-y-3">
               {studentServices.map((item) => (
-                <li key={item.label}>
-                  <Link
-                    href={item.href}
-                    className="group flex items-center gap-1 text-sm text-white/55 transition-colors hover:text-white"
-                  >
-                    {item.label}
-
-                    <ArrowUpRight
-                      className="h-3 w-3 opacity-0 transition-all duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-70"
-                    />
-                  </Link>
+                <li key={item}>
+                  <span className="text-sm text-white/55">
+                    {item}
+                  </span>
                 </li>
               ))}
             </ul>
@@ -138,19 +131,19 @@ export default function Footer() {
 
             <ul className="mt-5 space-y-3">
               {destinations.map((destination) => (
-                <li key={destination}>
+                <li key={destination.label}>
                   <Link
-                    href="/destinations"
+                    href={destination.href}
                     className="text-sm text-white/55 transition-colors hover:text-white"
                   >
-                    {destination}
+                    {destination.label}
                   </Link>
                 </li>
               ))}
 
               <li>
                 <Link
-                  href="/destinations"
+                  href="/#destinationsSection"
                   className="inline-flex items-center gap-1 pt-1 text-sm font-medium text-[#75c9ac] transition-colors hover:text-[#8bd8be]"
                 >
                   View all

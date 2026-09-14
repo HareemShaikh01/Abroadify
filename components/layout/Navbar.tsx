@@ -187,7 +187,7 @@ export default function Navbar() {
 
         {/* DESKTOP CTA */}
         <Link
-          href="/contact"
+          href="/contact#contactSection"
           className="group relative hidden overflow-hidden rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-[#0f1e4d] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#75c9ac] hover:shadow-[0_8px_25px_rgba(117,201,172,0.25)] md:inline-block"
         >
           <span className="relative z-10">Free Consultation</span>
@@ -350,7 +350,7 @@ export default function Navbar() {
           }}
         >
           <Link
-            href="/contact"
+            href="/contact#contactSection"
             className="group relative block w-full overflow-hidden rounded-full bg-[#0f1e4d] px-5 py-3 text-center text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#75c9ac] hover:text-[#0f1e4d] hover:shadow-[0_8px_25px_rgba(117,201,172,0.25)]"
           >
             <span className="relative z-10">Free Consultation</span>

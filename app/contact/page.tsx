@@ -18,7 +18,7 @@ export default function ContactPage() {
       <ContactQuickBar />
 
       {/* Form + Offices Section */}
-      <section className="bg-[#eef5ec] py-16 sm:py-20">
+      <section id="contactSection" className="bg-[#eef5ec] py-16 sm:py-20">
         <div className="mx-auto max-w-7xl px-6 sm:px-10 lg:px-16">
           <div className="grid gap-8 lg:grid-cols-5 lg:gap-10">
             {/* Form — 3/5 */}

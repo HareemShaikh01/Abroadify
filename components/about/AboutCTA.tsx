@@ -31,7 +31,7 @@ export default function AboutCTA() {
 
         <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
           <Link
-            href="/contact"
+            href="/contact#contactSection"
             className="group inline-flex items-center gap-2 rounded-full bg-[#75c9ac] px-6 py-3 text-sm font-semibold text-[#0f1e4d] transition-all duration-300 hover:bg-white hover:shadow-lg"
           >
             <Phone className="h-4 w-4" />
@@ -39,7 +39,7 @@ export default function AboutCTA() {
           </Link>
 
           <Link
-            href="/destinations"
+            href="/#destinationsSection"
             className="group inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition-all duration-300 hover:border-[#75c9ac] hover:bg-white/10"
           >
             Explore Destinations

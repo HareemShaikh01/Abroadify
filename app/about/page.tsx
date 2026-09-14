@@ -24,7 +24,7 @@ export default function AboutPage() {
       <AboutValues />
       <AboutJourney />
       <AboutDestinations />
-      <AboutOffices />
+      {/* <AboutOffices /> */}
       <AboutCTA />
     </>
   );
