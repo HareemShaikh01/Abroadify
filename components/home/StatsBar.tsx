@@ -43,7 +43,7 @@ export default function StatsBar() {
           <div
             key={stat.label}
             className={`px-4 text-center md:px-6 ${
-              index !== 0 ? "border-l border-white/25" : ""
+              index !== 0 ? "md:border-l md:border-white/25" : ""
             }`}
           >
             <AnimatedNumber

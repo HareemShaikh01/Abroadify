@@ -5,7 +5,6 @@ import AboutMission from "@/components/about/AboutMission";
 import AboutValues from "@/components/about/AboutValues";
 import AboutJourney from "@/components/about/AboutJourney";
 import AboutDestinations from "@/components/about/AboutDestinations";
-import AboutOffices from "@/components/about/AboutOffices";
 import AboutCTA from "@/components/about/AboutCTA";
 
 export const metadata = {
