@@ -36,10 +36,52 @@ const qualifications = [
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    setLoading(true);
+    setError("");
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get("name"),
+      city: formData.get("city"),
+      email: formData.get("email"),
+      phone: formData.get("phone"),
+      destination: formData.get("destination"),
+      service: formData.get("service"),
+      qualification: formData.get("qualification"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message.");
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch (err) {
+      console.error("Form submission error:", err);
+      setError("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -65,15 +107,21 @@ export default function ContactForm() {
       {submitted ? (
         <div className="mt-8 flex flex-col items-center rounded-2xl border border-[#75c9ac]/30 bg-[#75c9ac]/10 px-6 py-10 text-center">
           <CheckCircle2 className="h-12 w-12 text-[#75c9ac]" />
+
           <h3 className="mt-4 text-lg font-bold text-[#0f1e4d]">
             Thank you! Your message has been sent.
           </h3>
+
           <p className="mt-2 max-w-md text-sm text-gray-600">
             One of our counsellors will reach out to you shortly. For urgent
             queries, please call us directly.
           </p>
+
           <button
-            onClick={() => setSubmitted(false)}
+            onClick={() => {
+              setSubmitted(false);
+              setError("");
+            }}
             className="mt-5 text-sm font-semibold text-[#0f1e4d] underline underline-offset-4 transition-colors hover:text-[#75c9ac]"
           >
             Send another message
@@ -84,6 +132,7 @@ export default function ContactForm() {
           {/* Full Name */}
           <Field label="Full Name" required>
             <input
+              name="name"
               type="text"
               required
               placeholder="Enter your full name"
@@ -95,6 +144,7 @@ export default function ContactForm() {
           <div className="grid gap-5 sm:grid-cols-2">
             <Field label="Your City" required>
               <input
+                name="city"
                 type="text"
                 required
                 placeholder="Please enter your city"
@@ -104,6 +154,7 @@ export default function ContactForm() {
 
             <Field label="Email" required>
               <input
+                name="email"
                 type="email"
                 required
                 placeholder="Email address"
@@ -115,6 +166,7 @@ export default function ContactForm() {
           {/* Phone */}
           <Field label="Phone Number" required>
             <input
+              name="phone"
               type="tel"
               required
               placeholder="e.g. +92 300 1234567"
@@ -125,22 +177,35 @@ export default function ContactForm() {
           {/* Destination + Service */}
           <div className="grid gap-5 sm:grid-cols-2">
             <Field label="Preferred Study Destination" required>
-              <SelectField options={destinations} placeholder="Select..." />
+              <SelectField
+                name="destination"
+                options={destinations}
+                placeholder="Select..."
+              />
             </Field>
 
             <Field label="Service / Inquiry Type" required>
-              <SelectField options={services} placeholder="Select..." />
+              <SelectField
+                name="service"
+                options={services}
+                placeholder="Select..."
+              />
             </Field>
           </div>
 
           {/* Qualification */}
           <Field label="Current Education / Qualification" required>
-            <SelectField options={qualifications} placeholder="Select..." />
+            <SelectField
+              name="qualification"
+              options={qualifications}
+              placeholder="Select..."
+            />
           </Field>
 
           {/* Message */}
           <Field label="Message / Additional Details" required>
             <textarea
+              name="message"
               rows={4}
               required
               placeholder="Tell us more about your inquiry..."
@@ -148,13 +213,22 @@ export default function ContactForm() {
             />
           </Field>
 
+          {/* Error */}
+          {error && (
+            <p className="text-sm font-medium text-red-500">
+              {error}
+            </p>
+          )}
+
           {/* Submit */}
           <button
             type="submit"
-            className="group inline-flex items-center gap-2 rounded-full bg-[#75c9ac] px-7 py-3.5 text-sm font-semibold text-[#0f1e4d] transition-all duration-300 hover:bg-[#0f1e4d] hover:text-[#75c9ac] hover:shadow-lg"
+            disabled={loading}
+            className="group inline-flex items-center gap-2 rounded-full bg-[#75c9ac] px-7 py-3.5 text-sm font-semibold text-[#0f1e4d] transition-all duration-300 hover:bg-[#0f1e4d] hover:text-[#75c9ac] hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-60"
           >
             <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5" />
-            Submit Form
+
+            {loading ? "Sending..." : "Submit Form"}
           </button>
         </form>
       )}
@@ -176,20 +250,24 @@ function Field({
       <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-[#0f1e4d]">
         {label} {required && <span className="text-[#75c9ac]">*</span>}
       </label>
+
       {children}
     </div>
   );
 }
 
 function SelectField({
+  name,
   options,
   placeholder,
 }: {
+  name: string;
   options: string[];
   placeholder: string;
 }) {
   return (
     <select
+      name={name}
       required
       defaultValue=""
       className="w-full appearance-none rounded-xl border border-[#0f1e4d]/10 bg-[#eef5ec]/50 px-4 py-3 text-sm text-[#0f1e4d] outline-none transition-all focus:border-[#75c9ac] focus:bg-white focus:ring-2 focus:ring-[#75c9ac]/20"
@@ -203,6 +281,7 @@ function SelectField({
       <option value="" disabled>
         {placeholder}
       </option>
+
       {options.map((opt) => (
         <option key={opt} value={opt}>
           {opt}
@@ -211,3 +290,4 @@ function SelectField({
     </select>
   );
 }
+
