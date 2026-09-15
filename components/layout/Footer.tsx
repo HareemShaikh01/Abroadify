@@ -243,13 +243,20 @@ export default function Footer() {
               </p>
             </div>
 
-            <Link
-              href="/contact"
+            
+            <a
+              href={`mailto:info@abroadifyedu.com?subject=${encodeURIComponent(
+                "University Partnership Inquiry"
+              )}&body=${encodeURIComponent(
+                "Hello Abroadify Team,\n\nI am interested in becoming a university partner with Abroadify Consultants.\n\nUniversity Name:\nContact Person:\nEmail:\n\nPartnership Details:\n\nThank you."
+              )}`}
               className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-[#75c9ac] px-6 py-3 text-sm font-semibold text-[#0f1e4d] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#8bd8be]"
             >
               Become a Partner
               <ArrowUpRight className="h-4 w-4" />
-            </Link>
+            </a>
+            
+
 
           </div>
         </div>
