@@ -81,7 +81,7 @@ export default function ContactOffices() {
           <div>
             <h3 className="font-bold text-white">Monday – Saturday</h3>
             <p className="mt-1 text-sm text-white/60">
-              Visit us or call during office hours.
+              Visit us or call during office hours, 11am - 7pm
             </p>
           </div>
         </div>

@@ -41,6 +41,20 @@ const destinations = [
     href: "/germany",
   },
   {
+    iso: "ie",
+    name: "Ireland",
+    blurb:
+      "Europe's fastest-growing study destination — home to Google, Meta, Pfizer and world-class universities.",
+    href: "/ireland",
+  },
+  {
+    iso: "eu",
+    name: "Europe",
+    blurb:
+      "World-class education, affordable tuition and Schengen access — from Germany to Netherlands to Italy.",
+    href: "/europe",
+  },
+  {
     iso: "my",
     name: "Malaysia",
     blurb:
@@ -77,7 +91,6 @@ const destinations = [
   },
 ];
 
-// Duplicate the list so the loop feels seamless
 const loopedDestinations = [...destinations, ...destinations];
 
 export default function DestinationsCarousel() {
@@ -139,21 +152,18 @@ export default function DestinationsCarousel() {
 
   return (
     <section id="destinationsSection" className="bg-[#eef5ec] py-16 sm:py-20">
-      {/* Heading */}
       <div className="mx-auto max-w-7xl px-6 sm:px-10">
         <div className="mx-auto max-w-2xl text-center">
           <div className="flex items-center justify-center gap-3">
             <span className="h-[2px] w-8 bg-[#75c9ac]" />
-
             <span className="text-xs font-bold uppercase tracking-[0.18em] text-[#0f1e4d]">
               Where students go
             </span>
-
             <span className="h-[2px] w-8 bg-[#75c9ac]" />
           </div>
 
           <h2 className="mt-5 text-3xl font-bold leading-tight tracking-tight text-[#0f1e4d] sm:text-4xl">
-            Ten countries. One process that doesn&apos;t change.
+            Twelve countries. One process that doesn&apos;t change.
           </h2>
 
           <p className="mt-4 text-sm leading-7 text-gray-600 sm:text-base">
@@ -163,7 +173,6 @@ export default function DestinationsCarousel() {
         </div>
       </div>
 
-      {/* Carousel */}
       <div
         ref={trackRef}
         onMouseEnter={pause}
@@ -180,7 +189,6 @@ export default function DestinationsCarousel() {
             href={dest.href}
             className="group w-64 shrink-0 rounded-2xl border border-[#0f1e4d]/10 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[#75c9ac]/50 hover:shadow-lg"
           >
-            {/* Flag */}
             <div className="relative h-10 w-10 overflow-hidden rounded-full border border-[#0f1e4d]/10">
               <Image
                 src={`https://flagcdn.com/w80/${dest.iso}.png`}
@@ -191,15 +199,12 @@ export default function DestinationsCarousel() {
               />
             </div>
 
-            {/* Country name */}
             <h3 className="mt-4 font-bold text-[#0f1e4d]">{dest.name}</h3>
 
-            {/* Description */}
             <p className="mt-2 text-sm leading-6 text-gray-600">
               {dest.blurb}
             </p>
 
-            {/* CTA */}
             <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-[#0f1e4d] transition-all duration-300 group-hover:gap-2 group-hover:text-[#75c9ac]">
               Explore {dest.name}
               <span>→</span>

@@ -21,7 +21,7 @@ export default function Hero() {
 
             {/* Heading */}
             <h1 className="text-3xl font-bold leading-[1.15] tracking-tight text-[#0f1e4d] sm:text-4xl lg:text-[46px]">
-              Student Recruitment Agency & Study Abroad Consultants
+             Your Trusted Study Abroad Consultants
             </h1>
 
             {/* Description */}

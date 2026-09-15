@@ -25,11 +25,16 @@ export default function AboutHero() {
           <span className="h-[2px] w-8 bg-[#75c9ac]" />
         </div>
 
-        {/* Heading */}
+        {/* Heading — Line 1: Student Recruitment Agency */}
         <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl">
-          Every dream matters
-          <span className="block">— and we mean it.</span>
+          Student Recruitment Agency
         </h1>
+
+        {/* Heading — Line 2: Every dream matters (smaller, next line) */}
+        <p className="mt-4 text-2xl font-semibold leading-tight tracking-tight text-white/90 sm:text-3xl md:text-4xl">
+          Every dream matters
+          <span className="block">and we mean it.</span>
+        </p>
 
         {/* Subtext */}
         <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">

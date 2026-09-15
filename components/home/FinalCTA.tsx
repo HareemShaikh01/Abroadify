@@ -44,10 +44,10 @@ export default function FinalCTA() {
             </Link>
 
             <a
-              href="tel:03006693940"
+              href="tel:03213200274"
               className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-[#0f1e4d]/25 bg-white/70 px-7 py-3.5 text-sm font-semibold text-[#0f1e4d] transition-all duration-300 hover:-translate-y-0.5 hover:bg-white sm:w-auto"
             >
-              Call 0300 6693940
+              Call 0321 3200274
             </a>
           </div>
 

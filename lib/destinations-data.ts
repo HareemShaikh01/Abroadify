@@ -713,6 +713,146 @@ export const destinations: Destination[] = [
       },
     ],
   },
+  {
+    slug: "ireland",
+    code: "IRE",
+    name: "Ireland",
+    flag: "🇮🇪",
+    heroHeadline: "Study in Ireland",
+    heroSubtext:
+      "Ireland is one of Europe's fastest-growing study destinations — home to world-class universities, a thriving tech and pharma industry, and a warm, English-speaking welcome.",
+    trustBar: [
+      { label: "September & January", value: "Typical intakes" },
+      { label: "IELTS / PTE", value: "Usual English requirement" },
+      { label: "End-to-End", value: "Counselling, admission, visa" },
+      { label: "FBR·SECP", value: "Registered & accredited" },
+    ],
+    why: [
+      {
+        number: "01",
+        title: "European tech hub",
+        text: "Ireland is home to European headquarters of Google, Meta, Apple, Pfizer and more — great for graduates in tech, pharma and finance.",
+      },
+      {
+        number: "02",
+        title: "English-speaking EU country",
+        text: "The only English-speaking country in the EU after Brexit — everything from lectures to part-time jobs is in English.",
+      },
+      {
+        number: "03",
+        title: "Post-study work visa",
+        text: "Ireland offers a 2-year post-study work visa for master's graduates and 1 year for bachelor's — a clear pathway to stay and work.",
+      },
+    ],
+    fields: [
+      "Computer Science",
+      "Business & Management",
+      "Pharmaceutical Sciences",
+      "Engineering",
+      "Finance",
+      "Data Science",
+      "Hospitality",
+      "Biotechnology",
+    ],
+    note: "Ireland requires proof of funds (€10,000+) and IELTS/PTE. We work from the current requirements at the time you apply — never from an old checklist.",
+    faqs: [
+      {
+        question: "Do I need IELTS to apply to Ireland?",
+        answer:
+          "Most Irish universities accept IELTS or PTE. The required score differs by university and programme. We confirm exactly what your shortlisted universities want before you book a test.",
+      },
+      {
+        question: "How much does it cost to study in Ireland?",
+        answer:
+          "Tuition typically ranges from €10,000 to €25,000 per year. Living costs vary by city — Dublin is more expensive than Cork or Galway.",
+      },
+      {
+        question: "How long does the visa take?",
+        answer:
+          "Processing times depend on the embassy and season. A clean, well-evidenced application is the biggest thing you control.",
+      },
+      {
+        question: "Can I work while studying?",
+        answer:
+          "Yes — international students can work 20 hours/week during term and 40 hours/week during holidays, subject to current rules.",
+      },
+      {
+        question: "When should I start?",
+        answer:
+          "For September intake, start 8-10 months ahead. For January intake, 6-8 months. Ireland has become increasingly competitive.",
+      },
+    ],
+  },
+  {
+    slug: "europe",
+    code: "EU",
+    name: "Europe",
+    flag: "🇪🇺",
+    heroHeadline: "Study in Europe",
+    heroSubtext:
+      "Europe offers an unmatched combination of world-class education, affordable tuition and rich cultural experiences — from Germany's engineering hubs to France's business schools and the Netherlands' innovative universities.",
+    trustBar: [
+      { label: "Sep & Feb", value: "Typical intakes" },
+      { label: "IELTS / TOEFL", value: "Usual English requirement" },
+      { label: "End-to-End", value: "Counselling, admission, visa" },
+      { label: "FBR·SECP", value: "Registered & accredited" },
+    ],
+    why: [
+      {
+        number: "01",
+        title: "Low or zero tuition",
+        text: "Many European public universities charge minimal or no tuition fees — even for international students — while maintaining world-class standards.",
+      },
+      {
+        number: "02",
+        title: "Schengen access",
+        text: "A student visa in one Schengen country gives you access to 27 European countries — study, travel and explore freely.",
+      },
+      {
+        number: "03",
+        title: "Post-study work rights",
+        text: "Most European countries offer 1-2 year post-study work visas — Germany gives 18 months, France 1 year, Netherlands 1 year.",
+      },
+    ],
+    fields: [
+      "Engineering",
+      "Business & Management",
+      "Computer Science",
+      "Environmental Studies",
+      "Design",
+      "Data Science",
+      "Hospitality",
+      "Renewable Energy",
+    ],
+    note: "Europe includes Germany, France, Netherlands, Italy, Spain, Sweden and more. Requirements vary widely. We help you choose the right country and university based on your profile.",
+    faqs: [
+      {
+        question: "Do I need IELTS to study in Europe?",
+        answer:
+          "Most European universities accept IELTS or TOEFL for English-taught programmes. German or French may be required for some programmes. We confirm the language requirements for each shortlisted university.",
+      },
+      {
+        question: "How much does it cost to study in Europe?",
+        answer:
+          "Public universities in Germany charge minimal tuition. Netherlands and France range from €2,000-€15,000. Nordic countries (except Finland) are free for EU, higher for non-EU. Living costs vary widely.",
+      },
+      {
+        question: "Which European country is best for Pakistani students?",
+        answer:
+          "It depends on your goals. Germany for engineering, France for business, Netherlands for innovation, Italy for design and affordability. We help you pick based on your profile and budget.",
+      },
+      {
+        question: "Can I work while studying in Europe?",
+        answer:
+          "Most European countries allow 20 hours/week during term. Check specific country rules — Germany and France have generous allowances.",
+      },
+      {
+        question: "When should I start?",
+        answer:
+          "For September intake, start 10-12 months ahead. APS (Germany), Campus France, and visa procedures all take time.",
+      },
+    ],
+  },
 ];
 
 export function getDestination(slug: string): Destination | undefined {

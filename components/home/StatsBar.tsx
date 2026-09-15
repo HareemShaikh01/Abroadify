@@ -4,9 +4,9 @@ import { useEffect, useRef, useState } from "react";
 
 const stats = [
   { value: 10, suffix: "+", label: "Years of Experience" },
-  { value: 500, suffix: "+", label: "Students Guided" },
-  { value: 20, suffix: "+", label: "University Partners" },
-  { value: 10, suffix: "+", label: "Study Destinations" },
+  { value: 5000, suffix: "+", label: "University Partners" },
+  { value: 10000, suffix: "+", label: "Students Guided" },
+  { value: 12, suffix: "+", label: "Study Destinations" },
 ];
 
 export default function StatsBar() {
@@ -52,9 +52,7 @@ export default function StatsBar() {
               start={startCounting}
             />
 
-            <p className="mt-1 text-sm text-white/70">
-              {stat.label}
-            </p>
+            <p className="mt-1 text-sm text-white/70">{stat.label}</p>
           </div>
         ))}
       </div>
@@ -82,10 +80,7 @@ function AnimatedNumber({
     const animate = (timestamp: number) => {
       if (!startTime) startTime = timestamp;
 
-      const progress = Math.min(
-        (timestamp - startTime) / duration,
-        1
-      );
+      const progress = Math.min((timestamp - startTime) / duration, 1);
 
       // Smooth easing
       const eased = 1 - Math.pow(1 - progress, 3);
@@ -104,7 +99,7 @@ function AnimatedNumber({
 
   return (
     <p className="text-3xl font-bold text-white">
-      {count}
+      {count.toLocaleString()}
       {suffix}
     </p>
   );

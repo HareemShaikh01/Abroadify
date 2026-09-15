@@ -184,6 +184,38 @@ const countries = [
       { short: "UEF", name: "University of Eastern Finland" },
     ],
   },
+  {
+    code: "IRE",
+    name: "Ireland",
+    slug: "ireland",
+    flag: "🇮🇪",
+    universities: [
+      { short: "TCD", name: "Trinity College Dublin" },
+      { short: "UCD", name: "University College Dublin" },
+      { short: "UCC", name: "University College Cork" },
+      { short: "NUI", name: "National University of Ireland Galway" },
+      { short: "DCU", name: "Dublin City University" },
+      { short: "UL", name: "University of Limerick" },
+      { short: "MU", name: "Maynooth University" },
+      { short: "TU", name: "Technological University Dublin" },
+    ],
+  },
+  {
+    code: "EU",
+    name: "Europe",
+    slug: "europe",
+    flag: "🇪🇺",
+    universities: [
+      { short: "TUD", name: "Delft University of Technology (Netherlands)" },
+      { short: "UvA", name: "University of Amsterdam (Netherlands)" },
+      { short: "KU", name: "KU Leuven (Belgium)" },
+      { short: "ETH", name: "ETH Zurich (Switzerland)" },
+      { short: "EPFL", name: "EPFL (Switzerland)" },
+      { short: "UB", name: "University of Bologna (Italy)" },
+      { short: "UC3M", name: "Universidad Carlos III (Spain)" },
+      { short: "SU", name: "Stockholm University (Sweden)" },
+    ],
+  },
 ];
 
 export default function UniversitiesGrid() {
@@ -224,7 +256,6 @@ export default function UniversitiesGrid() {
           }`}
         >
           <div className="-mx-6 flex gap-2 overflow-x-auto px-6 pb-2 sm:mx-0 sm:flex-wrap sm:justify-center sm:px-0 [&::-webkit-scrollbar]:hidden">
-            {/* All tab */}
             <button
               onClick={() => setActiveCountry("all")}
               className={`shrink-0 rounded-full px-4 py-2 text-xs font-semibold transition-all duration-300 sm:text-sm ${
@@ -267,10 +298,8 @@ export default function UniversitiesGrid() {
                   : "translate-y-8 opacity-0"
               }`}
             >
-              {/* Hover glow */}
               <div className="pointer-events-none absolute inset-0 -translate-x-full bg-[#75c9ac]/[0.03] transition-transform duration-700 group-hover:translate-x-0" />
 
-              {/* Header */}
               <div className="relative mb-6 flex items-center justify-between gap-4 border-b border-[#0f1e4d]/10 pb-5">
                 <div className="flex items-center gap-3">
                   <span className="inline-flex items-center gap-2 rounded-lg bg-[#75c9ac]/15 px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-[#0f1e4d]">
@@ -295,7 +324,6 @@ export default function UniversitiesGrid() {
                 </Link>
               </div>
 
-              {/* Universities Grid — 3 columns (NON-CLICKABLE) */}
               <div className="relative grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {country.universities.map((uni) => (
                   <div
@@ -313,7 +341,6 @@ export default function UniversitiesGrid() {
                 ))}
               </div>
 
-              {/* Bottom — Explore Country */}
               <Link
                 href={`/${country.slug}`}
                 className="relative mt-6 flex items-center justify-between border-t border-[#0f1e4d]/10 pt-5 transition-all duration-300"
