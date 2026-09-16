@@ -8,7 +8,7 @@ const offices = [
     city: "Faisalabad",
     address: "AZ Mall Plaza, 4th Floor , Office No.02 Kohinoor, Faisalabad",
     phone: "+92321 3200274",
-    phoneAlt: "+92321 3200274",
+    phoneAlt: "+92309 0874274",
     email: "Info@abroadifyedu.com",
     mapLink: "https://maps.app.goo.gl/gp7wpD8XhuM8DoCYA?g_st=aw",
   },
