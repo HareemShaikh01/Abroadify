@@ -10,8 +10,8 @@ export async function POST(request: Request) {
     console.log("Form data received:", body);
 
     const { data, error } = await resend.emails.send({
-      from: "Website Form <onboarding@resend.dev>",
-      to: ["Info@abroadifyedu.com"],
+      from: "Abroadify <info@abroadifyedu.com>",
+      to: ["info@abroadifyedu.com"],
       subject: `New Inquiry from ${body.name}`,
       html: `
         <h2>New Study Abroad Inquiry</h2>

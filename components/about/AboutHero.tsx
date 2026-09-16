@@ -38,9 +38,7 @@ export default function AboutHero() {
 
         {/* Subtext */}
         <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-white/60 sm:text-lg">
-          We are a student recruitment agency and study-abroad consultancy
-          helping students turn academic aspirations into boarding passes —
-          with honest counselling, and support that doesn&apos;t end at the airport.
+          We are trusted study abroad consultants committed to making global degree programs accessible and rewarding. Built on a foundation of trust, transparency, and long-term relationships, Abroadify provides transparent, end-to-end guidance for students at every milestone of their international education, while linking premier universities worldwide with outstanding, career-focused talent
         </p>
 
         {/* CTA Buttons */}

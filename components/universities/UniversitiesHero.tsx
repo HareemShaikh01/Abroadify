@@ -46,7 +46,7 @@ export default function UniversitiesHero() {
         <h1 className="mt-6 text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl">
           Universities across
           <span className="block">
-            ten countries, <span className="text-[#75c9ac]">one honest process.</span>
+            20+ countries, <span className="text-[#75c9ac]">one honest process.</span>
           </span>
         </h1>
 
