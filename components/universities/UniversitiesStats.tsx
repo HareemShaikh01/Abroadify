@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 10, suffix: "", label: "Study Destinations" },
-  { value: 90, suffix: "+", label: "Universities We Apply To" },
+  { value: 20, suffix: "+", label: "Study Destinations" },
+  { value: 2000, suffix: "+", label: "Universities We Apply To" },
   { value: null, suffix: "End-to-End", label: "Shortlist to Visa" },
   { value: null, suffix: "FBR·SECP", label: "Registered & Accredited" },
 ];

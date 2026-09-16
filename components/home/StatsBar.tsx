@@ -6,7 +6,7 @@ const stats = [
   { value: 10, suffix: "+", label: "Years of Experience" },
   { value: 5000, suffix: "+", label: "University Partners" },
   { value: 10000, suffix: "+", label: "Students Guided" },
-  { value: 12, suffix: "+", label: "Study Destinations" },
+  { value: 20, suffix: "+", label: "Study Destinations" },
 ];
 
 export default function StatsBar() {

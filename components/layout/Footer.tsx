@@ -78,9 +78,10 @@ export default function Footer() {
 
             {/* Social Icons */}
             <div className="mt-6 flex gap-2">
-
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61560464602243"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/55 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#75c9ac] hover:bg-[#75c9ac] hover:text-[#0f1e4d]"
               >
@@ -88,21 +89,14 @@ export default function Footer() {
               </a>
 
               <a
-                href="#"
+                href="https://www.instagram.com/abroadifypakistan?stkn=dGQweHhkeGx4MmVh"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/55 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#75c9ac] hover:bg-[#75c9ac] hover:text-[#0f1e4d]"
               >
                 <FaInstagram className="h-4 w-4" />
               </a>
-
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 text-white/55 transition-all duration-300 hover:-translate-y-0.5 hover:border-[#75c9ac] hover:bg-[#75c9ac] hover:text-[#0f1e4d]"
-              >
-                <FaLinkedinIn className="h-4 w-4" />
-              </a>
-
             </div>
           </div>
 
@@ -243,7 +237,7 @@ export default function Footer() {
               </p>
             </div>
 
-            
+
             <a
               href={`mailto:info@abroadifyedu.com?subject=${encodeURIComponent(
                 "University Partnership Inquiry"
@@ -255,7 +249,7 @@ export default function Footer() {
               Become a Partner
               <ArrowUpRight className="h-4 w-4" />
             </a>
-            
+
 
 
           </div>
